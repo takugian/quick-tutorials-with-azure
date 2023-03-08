@@ -44,9 +44,9 @@ docker login {ContainerRegistryName}.azurecr.io
 	
 Push to your registry
 ```
-docker tag rest_api_nodejs qtrestapinodejs.azurecr.io/rest_api_nodejs
+docker tag rest_api_nodejs {ContainerRegistryName}.azurecr.io/rest_api_nodejs
 
-docker push qtrestapinodejs.azurecr.io/rest_api_nodejs
+docker push {ContainerRegistryName}.azurecr.io/rest_api_nodejs
 ```
 
 ```

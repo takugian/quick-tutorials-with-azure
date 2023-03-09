@@ -46,7 +46,7 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [bation_host]
 
-- [bastion_host] - Bation host `backlog`
+- [bastion_host] - Bation host `backlog` @P1
 
 ## [container_instance]
 
@@ -116,9 +116,11 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [virtual_machine]
 
+- [virtual_machine] - Virtual Machine `backlog` @P1
+
 ## [virtual_network]
 
-- [vnet_subnet_private] - Creates a Virtual Network with two private subnets and security groups
+- [vnet_subnet_private] - Virtual Network with two private subnets and security groups
 
 ## Thank you
 

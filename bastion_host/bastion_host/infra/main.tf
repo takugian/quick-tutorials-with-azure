@@ -17,17 +17,17 @@ resource "random_string" "random" {
 }
 
 resource "azurerm_public_ip" "public_ip" {
-  name                = "bastion-host-pip"
-  location            = var.LOCATION
   resource_group_name = var.RESOURCE_GROUP
+  location            = var.LOCATION
+  name                = "public-ip-bastion"
   allocation_method   = "Static"
   sku                 = "Standard"
 }
 
 resource "azurerm_bastion_host" "bastion_host" {
-  name                = "bastion-host-default"
-  location            = var.LOCATION
   resource_group_name = var.RESOURCE_GROUP
+  location            = var.LOCATION
+  name                = "bastion-host"
 
   ip_configuration {
     name                 = "bastion-host-config"

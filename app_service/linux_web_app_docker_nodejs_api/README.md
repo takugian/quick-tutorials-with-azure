@@ -1,34 +1,14 @@
-# rest_api_nodejs
+# linux_web_app_docker_nodejs_api
+
+Creates a Linux Web App to deploy a REST NodeJS API using Docker.
+
+Tip: an example of API can be found in https://github.com/takugian/rest_nodejs_api.
 
 ## Pre requirements
 
 - Repository created in Azure Container Registry;
 
 ## How to deploy
-
-### Localnpm install
-
-```
-npm start
-```
-
-#### How to test
-
-- curl http://localhost:3070/
-- curl http://localhost:3070/customers
-
-### Docker
-
-```
-docker build -t rest_api_nodejs .
-docker images
-docker run -d -p 3070:3070 --name rest_api_nodejs rest_api_nodejs
-```
-
-#### How to test
-
-- curl http://localhost:3070/
-- curl http://localhost:3070/customers
 
 ### Azure
 

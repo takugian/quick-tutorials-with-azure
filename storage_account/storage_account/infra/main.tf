@@ -1,108 +1,54 @@
 provider "azurerm" {
-    subscription_id = var.SUBSCRIPTION_ID
-    tenant_id = var.TENANT_ID
-    features { }
+  subscription_id = var.SUBSCRIPTION_ID
+  tenant_id       = var.TENANT_ID
+  features {}
 }
 
 resource "azurerm_resource_group" "resource_group" {
-    name        = var.RESOURCE_GROUP
-    location    = var.LOCATION  
+  name     = var.RESOURCE_GROUP
+  location = var.LOCATION
+}
+
+resource "random_string" "random" {
+  length  = 6
+  special = false
+  lower   = true
+  upper   = false
 }
 
 resource "azurerm_storage_account" "storage_account" {
-    name                                    = "qtstorageaccount123"
-    location                                = var.LOCATION
-    resource_group_name                     = azurerm_resource_group.resource_group.name
-    account_kind                            = "StorageV2"
-    account_tier                            = "Standard"
-    access_tier                             = "Hot"
-    account_replication_type                = "LRS"
-    cross_tenant_replication_enabled        = true
-    enable_https_traffic_only               = true
-    # public_network_access_enabled           =
+  location                          = var.LOCATION
+  resource_group_name               = azurerm_resource_group.resource_group.name
+  name                              = "storageaccount${random_string.random.result}"
+  account_kind                      = "StorageV2"
+  account_tier                      = "Standard"
+  access_tier                       = "Hot"
+  account_replication_type          = "LRS"
+  cross_tenant_replication_enabled  = true
+  enable_https_traffic_only         = true
+  public_network_access_enabled     = true
+  queue_encryption_key_type         = "Service"
+  table_encryption_key_type         = "Service"
+  infrastructure_encryption_enabled = false
+  depends_on                        = [azurerm_resource_group.resource_group]
 
-    # customer_managed_key {
-    #     key_vault_key_id                =
-    #     user_assigned_identity_id       =
-    # }
+  #   custom_domain {}
 
-    # network_rules {
-    #     default_action                  = "Deny"
-    #     bypass                          =
-    #     ip_rules                        = ["100.0.0.1"]
-    #     virtual_network_subnet_ids      = [var.VIRTUAL_NETWORK_SUBNET_ID_1]
-    #     private_link_access {
-    #         endpoint_resource_id        =
-    #     }
-    # }
+  #   customer_managed_key {}
 
-    # static_website {
-    #     index_document          =
-    #     error_404_document      =
-    # }
+  #   identity {}
 
-    # blob_properties {
+  #   blob_properties {}
 
-    #     versioning_enabled      = 
-        
-    #     cors_rule {
-          
-    #     }
+  #   queue_properties {}
 
-    #     delete_retention_policy {
-          
-    #     }
-    # }
+  #   static_website {}
 
-    # queue_properties {
-
-    #     cors_rule {
-          
-    #     }
-
-    #     logging {
-    #         delete                      = 
-    #         read                        = 
-    #         version                     = 
-    #         write                       = 
-    #         retention_policy_days       = 
-    #     }
-    # }
-    
-    depends_on                  = [azurerm_resource_group.resource_group]
+  # network_rules {
+  #     default_action                  = "Deny"
+  #     bypass                          = "Logging" // Logging, Metrics, AzureServices, or None
+  #     ip_rules                        = [""]
+  #     virtual_network_subnet_ids      = [var.VIRTUAL_NETWORK_SUBNET_ID_1]
+  #     private_link_access {}
+  # }
 }
-
-resource "azurerm_storage_container" "storage_container" {
-    name                        = "qtcontainer123"
-    storage_account_name        = azurerm_storage_account.storage_account.name
-    container_access_type       = "private"
-}
-
-# resource "azurerm_storage_blob" "storage_blob" {
-#     name                        = "qtblob.zip"
-#     storage_account_name        = azurerm_storage_account.storage_account.name
-#     storage_container_name      = azurerm_storage_container.storage_container.name
-#     type                        = "Block"
-#     source                      = "some-local-file.zip"
-# }
-
-resource "azurerm_storage_queue" "storage_queue" {
-    name                        = "qtqueue123"
-    storage_account_name        = azurerm_storage_account.storage_account.name
-}
-
-# resource "azurerm_storage_table" "storage_table" {
-#     name                        = "qttable123"
-#     storage_account_name        = azurerm_storage_account.storage_account.name
-# }
-
-# resource "azurerm_storage_table_entity" "storage_table_entity" {
-#     storage_account_name        = azurerm_storage_account.storage_account.name
-#     table_name                  = azurerm_storage_table.storage_table.name
-#     partition_key               = "pk"
-#     row_key                     = "rk"
-    
-#     entity = {
-#         item = "item"
-#     }
-# }

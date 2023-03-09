@@ -17,3 +17,7 @@ variable "LOCATION" {
 variable "LINUX_WEB_APP_ID" {
 
 }
+
+variable "EMAIL_RECEIVER" {
+
+}

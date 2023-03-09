@@ -20,51 +20,12 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.LOCATION
 }
 
-resource "azurerm_storage_account" "storage_account" {
-  location                 = var.LOCATION
-  resource_group_name      = azurerm_resource_group.resource_group.name
-  name                     = "qtsa${random_string.random.result}"
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-  depends_on               = [azurerm_resource_group.resource_group]
-}
-
-resource "azurerm_storage_container" "storage_container" {
-  name                  = "${local.use_case_name}-sc"
-  storage_account_name  = azurerm_storage_account.storage_account.name
-  container_access_type = "private"
-  depends_on            = [azurerm_resource_group.resource_group]
-}
-
-data "azurerm_storage_account_blob_container_sas" "storage_account_blob_container_sas" {
-  connection_string = azurerm_storage_account.storage_account.primary_connection_string
-  container_name    = azurerm_storage_container.storage_container.name
-  https_only        = false
-  # ip_address          = "168.1.5.65"
-  start  = "2023-01-01"
-  expiry = "2023-12-31"
-  # cache_control       = "max-age=5"
-  # content_disposition = "inline"
-  # content_encoding    = "deflate"
-  # content_language    = "en-US"
-  # content_type        = "application/json"
-
-  permissions {
-    read   = true
-    add    = true
-    create = true
-    write  = true
-    delete = true
-    list   = true
-  }
-}
-
 resource "azurerm_service_plan" "service_plan" {
   location            = var.LOCATION
   resource_group_name = azurerm_resource_group.resource_group.name
   name                = "${local.use_case_name}-sp"
   os_type             = "Linux"
-  sku_name            = "B1"
+  sku_name            = "P1v2"
   depends_on          = [azurerm_resource_group.resource_group]
 }
 
@@ -111,21 +72,12 @@ resource "azurerm_linux_web_app" "linux_web_app" {
 
     application_logs {
       file_system_level = "Verbose"
-      azure_blob_storage {
-        level             = "Verbose"
-        retention_in_days = 1
-        sas_url           = data.azurerm_storage_account_blob_container_sas.storage_account_blob_container_sas.sas
-      }
     }
 
     http_logs {
-      # file_system {
-      #   retention_in_days = 1
-      #   retention_in_mb   = 100
-      # }
-      azure_blob_storage {
+      file_system {
         retention_in_days = 1
-        sas_url           = data.azurerm_storage_account_blob_container_sas.storage_account_blob_container_sas.sas
+        retention_in_mb   = 100
       }
     }
   }
@@ -150,26 +102,81 @@ resource "azurerm_app_service_source_control" "app_service_source_control" {
   }
 }
 
-resource "azurerm_monitor_diagnostic_setting" "monitor_diagnostic_setting" {
-  name               = "${local.use_case_name}-mds"
-  target_resource_id = azurerm_linux_web_app.linux_web_app.id
-  storage_account_id = azurerm_storage_account.storage_account.id
+resource "azurerm_monitor_autoscale_setting" "monitor_autoscale_setting" {
+  resource_group_name = var.RESOURCE_GROUP
+  location            = var.LOCATION
+  name                = "${local.use_case_name}-mas"
+  target_resource_id  = azurerm_service_plan.service_plan.id
 
-  enabled_log {
-    category = "AppServiceAppLogs"
+  profile {
+    name = "default"
 
-    retention_policy {
-      enabled = true
-      days    = 1
+    capacity {
+      default = 1
+      minimum = 1
+      maximum = 3
+    }
+
+    rule {
+      metric_trigger {
+        metric_name        = "MemoryPercentage"
+        metric_namespace   = "microsoft.web/serverfarms"
+        metric_resource_id = azurerm_service_plan.service_plan.id
+        operator           = "GreaterThan"
+        statistic          = "Max"
+        time_aggregation   = "Maximum"
+        time_grain         = "PT1M"
+        time_window        = "PT10M"
+        threshold          = 50
+
+        # dimensions {
+        #   name     = "Instance"
+        #   operator = "Equals"
+        #   values   = ["*"]
+        # }
+      }
+
+      scale_action {
+        direction = "Increase"
+        type      = "ChangeCount"
+        value     = "2"
+        cooldown  = "PT5M"
+      }
+    }
+
+    rule {
+      metric_trigger {
+        metric_name        = "CpuPercentage"
+        metric_namespace   = "microsoft.web/serverfarms"
+        metric_resource_id = azurerm_service_plan.service_plan.id
+        operator           = "GreaterThan"
+        statistic          = "Max"
+        time_aggregation   = "Maximum"
+        time_grain         = "PT1M"
+        time_window        = "PT10M"
+        threshold          = 50
+
+        # dimensions {
+        #   name     = "Instance"
+        #   operator = "Equals"
+        #   values   = ["*"]
+        # }
+      }
+
+      scale_action {
+        direction = "Increase"
+        type      = "ChangeCount"
+        value     = "2"
+        cooldown  = "PT5M"
+      }
     }
   }
 
-  metric {
-    category = "AllMetrics"
-
-    retention_policy {
-      enabled = true
-      days    = 1
+  notification {
+    email {
+      send_to_subscription_administrator    = true
+      send_to_subscription_co_administrator = true
+      custom_emails                         = [var.EMAIL_NOTIFICATION]
     }
   }
 }

@@ -16,7 +16,7 @@ resource "azurerm_monitor_action_group" "monitor_action_group" {
 
   email_receiver {
     name          = "takugian"
-    email_address = "gian.hd@gmail.com"
+    email_address = var.EMAIL_RECEIVER
 
   }
 }

@@ -2,6 +2,10 @@
 
 A lot of Azure tutorials for you!!! ;)
 
+## Services used in use cases
+
+* [rest_nodejs_api](https://github.com/takugian/rest_nodejs_api) - NodeJS REST API
+
 ## [active_directory]
 
 ## [api_management]
@@ -14,12 +18,12 @@ A lot of Azure tutorials for you!!! ;)
 - [linux_function_app] - Linux Function App `backlog`
 - [linux_web_app_authentication] - Linux Web App with Authentication `backlog`
 - [linux_web_app_custom_domain] - Linux Web App with Custom Domain and Certificate `backlog`
-- [linux_web_app_deployments_slots] - Linux Web App with Deployments Slots `backlog`
+- [linux_web_app_deployments_slots] - Linux Web App with Deployments Slots
 - [linux_web_app_docker_java_api] - Linux Web App with Java as runtime and deployed using Docker `backlog`
 - [linux_web_app_docker_nodejs_api] - Linux Web App with NodeJS as runtime and deployed using Docker
 - [linux_web_app_logs] - Linux Web App with Logs enabled
-- [linux_web_app_private] - Linux Web App with Private endpoint `backlog`
-- [linux_web_app_scaling] - Linux Web App with Scaling `backlog`
+- [linux_web_app_private] - Linux Web App with Private endpoint `backlog` @P1
+- [linux_web_app_scaling] - Linux Web App with Scaling
 - [static_site] - Static Site `backlog`
 
 ## [application_gateway]
@@ -28,7 +32,7 @@ A lot of Azure tutorials for you!!! ;)
 
 - [application_insights] - Application Insights for NodeJS with Log Analytics Workspace
 
-## [Azure Functions]
+## [azure_functions]
 
 - [function_app_java] - Azure function using Java as the runtime `backlog`
 - [function_app_nodejs] - Azure function using NodeJS as the runtime
@@ -40,46 +44,46 @@ A lot of Azure tutorials for you!!! ;)
 - [dlq] - `check`
 - [private] - `check`
 
-## [Bation Host]
+## [bation_host]
 
 - [bastion_host] - Bation host `backlog`
 
-## [Container Instance]
+## [container_instance]
 
-## [Cache For Redis]
+## [cache_for_redis]
 
 ## [container_registry]
 
 - [container_registry] - Container registry with encryption and georeplication
 
-## [Cosmos DB]
+## [cosmos_db]
 
-## [Database For MySQL]
+## [database_for_mysql]
 
-## [Event Grid]
+## [event_grid]
 
-## [Front Door]
+## [front_door]
 
 ## [key_vault]
 
 - [key_vault] - Key vault
 - [key_vault_certificate] - Key vault certificate `backlog`
 - [key_vault_key] - Key vault key
-- [key_vault_managed_storage_account] - key vault managed storage account `backlog`
 
-## [Load Balancer]
+## [load_balancer]
 
-## [Logic App]
+## [logic_app]
 
 ## [monitor]
 
-- [monitor_activity_log_alert] - Metric Activity Log Alert 
+- [monitor_activity_log_alert] - Metric Activity Log Alert
+- [monitor_autoscale_setting] - Autoscale setting of a App Service Service Plan
 - [monitor_diagnostic_setting] - Diagnostic setting from Linux Web App to a Storage Account
 - [monitor_metric_alert] - Metric Alert of a Linux Web App
 
-## [Notification Hub]
+## [ntification_hub]
 
-## [Private Endpoint]
+## [private_endpoint]
 
 ## [resource_group]
 
@@ -98,18 +102,19 @@ A lot of Azure tutorials for you!!! ;)
 - [servicebus_queue_foward] - Service bus queue with foward enabled `backlog`
 - [servicebus_topic] - Service bus topic `backlog`
 
-## [SQL Database]
+## [sql_database]
 
-## [Static Web App]
+## [static_web_app]
 
 ## [storage_account]
 
 - [storage_account] - Storage account
-- [storage_account_blob] - Storage account with a blob `backlog`
-- [storage_account_queue] - Storage account with a queue `backlog`
-- [storage_account_table] - Storage account with a table `backlog`
+- [storage_account_blob] - Storage account with a blob
+- [storage_account_queue] - Storage account with a queue
+- [storage_account_table] - Storage account with a table
+- [storage_share] - Storage account with file share `backlog`
 
-## [Virtual Machine]
+## [virtual_machine]
 
 ## [virtual_network]
 

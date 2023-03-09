@@ -7,7 +7,7 @@ variable "TENANT_ID" {
 }
 
 variable "RESOURCE_GROUP" {
-  default = "quicktutorials-app_service-linux_web_app_logs"
+  default = "quicktutorials-storage_account-storage_account_queue"
 }
 
 variable "LOCATION" {

@@ -9,13 +9,13 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.LOCATION
 }
 
-resource "azurerm_public_ip" "public_ip" {
-  resource_group_name = var.RESOURCE_GROUP
-  location            = var.LOCATION
-  name                = "public-ip"
-  allocation_method   = "Static"
-  sku                 = "Standard"
-}
+# resource "azurerm_public_ip" "public_ip" {
+#   resource_group_name = var.RESOURCE_GROUP
+#   location            = var.LOCATION
+#   name                = "public-ip"
+#   allocation_method   = "Static"
+#   sku                 = "Standard"
+# }
 
 resource "azurerm_network_interface" "network_interface" {
   resource_group_name = var.RESOURCE_GROUP
@@ -26,7 +26,7 @@ resource "azurerm_network_interface" "network_interface" {
     name                          = "internal"
     subnet_id                     = var.SUBNET_ID
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.public_ip.id
+    # public_ip_address_id          = azurerm_public_ip.public_ip.id
   }
 }
 

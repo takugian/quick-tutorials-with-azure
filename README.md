@@ -12,11 +12,8 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [app_service]
 
-- [app_service_cosmosdb] - App Service integrated to CosmosDB `backlog`
-- [app_service_environment_v3] - App Service Environment `backlog`
-- [app_service_servicebus] - App Service integrated to Service Bus `backlog`
-- [linux_function_app] - Linux Function App `backlog`
 - [linux_web_app_authentication] - Linux Web App with Authentication `backlog`
+- [linux_web_app_cosmosdb] - App Service integrated to CosmosDB `backlog`
 - [linux_web_app_custom_domain] - Linux Web App with Custom Domain and Certificate `backlog`
 - [linux_web_app_deployments_slots] - Linux Web App with Deployments Slots
 - [linux_web_app_docker_java_api] - Linux Web App with Java as runtime and deployed using Docker `backlog`
@@ -24,7 +21,9 @@ A lot of Azure tutorials for you!!! ;)
 - [linux_web_app_logs] - Linux Web App with Logs enabled
 - [linux_web_app_private] - Linux Web App with Private endpoint `backlog` @P1
 - [linux_web_app_scaling] - Linux Web App with Scaling
-- [static_site] - Static Site `backlog`
+- [linux_web_app_servicebus_queue] - Linux Web App integrated to Service Bus Queue `backlog`
+- [linux_web_app_servicebus_topic] - Linux Web App integrated to Service Bus Topic `backlog`
+- [linux_web_app_source_control] - Linux Web App deployed using Source Control
 
 ## [application_gateway]
 
@@ -34,19 +33,32 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [azure_functions]
 
-- [function_app_java] - Azure function using Java as the runtime `backlog`
-- [function_app_nodejs] - Azure function using NodeJS as the runtime
-- [function_app_blob_storage] - Azure function and a blob storage `backlog`
-- [function_app_queue_storage] - Azure function and a queue storage
-- [function_app_service_bus_queue] - Azure function and a service bus queue
-- [function_app_service_bus_topic] - Azure function and a service bus topic `backlog`
+- [linux_function_app_authentication] - Linux Function App with Authentication `backlog`
+- [linux_function_app_cli] - Linux Function App deployed using Azure CLI
+- [linux_function_app_custom_domain] - `backlog`
+- [linux_function_app_deployments_slots] - `backlog`
+- [linux_function_app_docker_java_app] - `backlog`
+- [linux_function_app_docker_nodejs_app] - `backlog`
+- [linux_function_app_logs] - `backlog`
+- [linux_function_app_private] - `backlog`
+- [linux_function_app_scaling] - `backlog`
+- [linux_function_app_source_control] - Linux Function App deployed using Source Control `blocked`
 
-- [dlq] - `check`
-- [private] - `check`
+### [function_app_function_nodejs]
+
+- [blob_storage_trigger] - Blob Storage (Diretion In/Out) `backlog`
+- [cosmos_db_trigger] - xpto  `backlog`
+- [http_trigger] - In HTTP Trigger `backlog`
+- [private_linux_web_app_integration] - xpto `backlog`
+- [queue_storage_trigger] - Queue Storage (Diretion In/Out) `backlog` @P1
+- [service_bus_queue_trigger] - xpto `backlog`
+- [service_bus_topic_trigger] - xpto `backlog`
+- [table_storage_integration] - xpto `backlog`
+- [timer_trigger] - xpto `backlog`
 
 ## [bation_host]
 
-- [bastion_host] - Bation host `backlog` @P1
+- [bastion_host] - Bation host
 
 ## [container_instance]
 
@@ -116,7 +128,7 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [virtual_machine]
 
-- [virtual_machine] - Virtual Machine `backlog` @P1
+- [virtual_machine] - Virtual Machine
 
 ## [virtual_network]
 

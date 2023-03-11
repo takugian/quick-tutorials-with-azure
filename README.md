@@ -46,15 +46,19 @@ A lot of Azure tutorials for you!!! ;)
 
 ### [function_app_function_nodejs]
 
-- [blob_storage_trigger] - Blob Storage (Diretion In/Out) `backlog`
+- [blob_storage_trigger] - Blob Storage (trigger and diretions in and out)
 - [cosmos_db_trigger] - xpto  `backlog`
-- [http_trigger] - In HTTP Trigger `backlog`
+- [event_grid_trigger] - xpto  `backlog`
+- [http_trigger] - HTTP request (trigger and direction out)
 - [private_linux_web_app_integration] - xpto `backlog`
-- [queue_storage_trigger] - Queue Storage (Diretion In/Out) `backlog` @P1
-- [service_bus_queue_trigger] - xpto `backlog`
-- [service_bus_topic_trigger] - xpto `backlog`
-- [table_storage_integration] - xpto `backlog`
-- [timer_trigger] - xpto `backlog`
+- [queue_storage_trigger] - Queue Storage (trigger and direction out)
+- [service_bus_queue_trigger] - Service Bus Queue (trigger and direction out)
+- [service_bus_topic_trigger] - Service Bus Topic (trigger and direction out)
+- [sql_trigger] - xpto `backlog`
+- [table_storage_integration] - xpto `backlog` @P1
+- [timer_trigger] - xpto `backlog` @P1
+
+todo configs avançadas host.json
 
 ## [bation_host]
 
@@ -107,12 +111,9 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [service_bus]
 
-- [servicebus_namespace] - Service bus namespace `backlog`
-- [servicebus_queue] - Service bus queue `backlog`
-- [servicebus_queue_dlq] - Service bus queue with DLQ enabled `backlog`
-- [servicebus_queue_fifo] - Service bus queue with FIFO enabled `backlog`
-- [servicebus_queue_foward] - Service bus queue with foward enabled `backlog`
-- [servicebus_topic] - Service bus topic `backlog`
+- [servicebus_namespace] - Service bus namespace
+- [servicebus_queue] - Service bus queue with Forward and DLQ configuration
+- [servicebus_topic] - Service bus topic with Forward and DLQ configuration
 
 ## [sql_database]
 

@@ -5,10 +5,15 @@ A lot of Azure tutorials for you!!! ;)
 ## Services used in use cases
 
 * [rest_nodejs_api](https://github.com/takugian/rest_nodejs_api) - NodeJS REST API
+* [nodejs_azure_function_app](https://github.com/takugian/nodejs_azure_function_app) - NodeJS Function
 
 ## [active_directory]
 
+`backlog`
+
 ## [api_management]
+
+`backlog`
 
 ## [app_service]
 
@@ -19,13 +24,16 @@ A lot of Azure tutorials for you!!! ;)
 - [linux_web_app_docker_java_api] - Linux Web App with Java as runtime and deployed using Docker `backlog`
 - [linux_web_app_docker_nodejs_api] - Linux Web App with NodeJS as runtime and deployed using Docker
 - [linux_web_app_logs] - Linux Web App with Logs enabled
-- [linux_web_app_private] - Linux Web App with Private endpoint `backlog` @P1
+- [linux_web_app_private_ip] - Linux Web App with Private endpoint `backlog` @P1
+- [linux_web_app_private_linux_function_app_integration] - Linux Web App integrated to Private Linux Function App `backlog`
 - [linux_web_app_scaling] - Linux Web App with Scaling
-- [linux_web_app_servicebus_queue] - Linux Web App integrated to Service Bus Queue `backlog`
-- [linux_web_app_servicebus_topic] - Linux Web App integrated to Service Bus Topic `backlog`
+- [linux_web_app_servicebus_queue_integration] - Linux Web App integrated to Service Bus Queue `backlog`
+- [linux_web_app_servicebus_topic_integration] - Linux Web App integrated to Service Bus Topic `backlog`
 - [linux_web_app_source_control] - Linux Web App deployed using Source Control
 
 ## [application_gateway]
+
+`backlog`
 
 ## [application_insights]
 
@@ -48,7 +56,7 @@ A lot of Azure tutorials for you!!! ;)
 
 - [blob_storage_trigger] - Blob Storage (trigger and diretions in and out)
 - [cosmos_db_trigger] - xpto  `backlog`
-- [event_grid_trigger] - xpto  `backlog`
+- [event_grid_trigger] - EventGrid (trigger and direction out)
 - [http_trigger] - HTTP request (trigger and direction out)
 - [private_linux_web_app_integration] - xpto `backlog`
 - [queue_storage_trigger] - Queue Storage (trigger and direction out)
@@ -58,15 +66,19 @@ A lot of Azure tutorials for you!!! ;)
 - [table_storage_integration] - xpto `backlog` @P1
 - [timer_trigger] - xpto `backlog` @P1
 
-todo configs avançadas host.json
+<!-- TODO configs avançadas host.json -->
 
 ## [bation_host]
 
-- [bastion_host] - Bation host
+- [bastion_host] - Bastion host
 
 ## [container_instance]
 
+`backlog`
+
 ## [cache_for_redis]
+
+`backlog`
 
 ## [container_registry]
 
@@ -74,11 +86,23 @@ todo configs avançadas host.json
 
 ## [cosmos_db]
 
+`backlog`
+
 ## [database_for_mysql]
+
+`backlog`
 
 ## [event_grid]
 
+- [custom_topic_http_request_to_azure_function] - EventGrid Custom Topic that integrates HTTP Request and Azure Function
+- [custom_topic_http_request_to_storage_queue] - EventGrid Custom Topic that integrates HTTP Request and Storage Queue
+- [custom_topic_storage_blob_to_storage_queue] - EventGrid Custom Topic that integrates Storage Blob and Storage Queue
+- [domain_topic_storage_queue] - EventGrid Domain Topic that integrates HTTP Request and Storage Queue
+- [system_topic_storage_queue] - EventGrid System Topic integrated to a Storage Queue
+
 ## [front_door]
+
+`backlog`
 
 ## [key_vault]
 
@@ -88,7 +112,11 @@ todo configs avançadas host.json
 
 ## [load_balancer]
 
+`backlog`
+
 ## [logic_app]
+
+`backlog`
 
 ## [monitor]
 
@@ -97,9 +125,13 @@ todo configs avançadas host.json
 - [monitor_diagnostic_setting] - Diagnostic setting from Linux Web App to a Storage Account
 - [monitor_metric_alert] - Metric Alert of a Linux Web App
 
-## [ntification_hub]
+## [notification_hub]
+
+`backlog`
 
 ## [private_endpoint]
+
+`backlog`
 
 ## [resource_group]
 
@@ -115,9 +147,15 @@ todo configs avançadas host.json
 - [servicebus_queue] - Service bus queue with Forward and DLQ configuration
 - [servicebus_topic] - Service bus topic with Forward and DLQ configuration
 
+<!-- TODO filters -->
+
 ## [sql_database]
 
+`backlog`
+
 ## [static_web_app]
+
+`backlog`
 
 ## [storage_account]
 

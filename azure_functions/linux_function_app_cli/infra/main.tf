@@ -15,16 +15,11 @@ locals {
   use_case_name = "nodejs-azure-function-app-${random_string.random.result}"
 }
 
-data "azurerm_storage_account" "my_storage" {
-  name                = "storageaccountifss06"
-  resource_group_name = "quicktutorials-storage_account-storage_account"
-}
-
-data "azurerm_eventhub_namespace_authorization_rule" "my_servicebus" {
-  resource_group_name = "quicktutorials-servicebus-servicebus_namespace"
-  namespace_name      = "servicebus-namespace-ugox3x"
-  name                = "servicebus-namespace-authorization-rule"
-}
+# data "azurerm_eventhub_namespace_authorization_rule" "my_servicebus" {
+#   resource_group_name = "quicktutorials-servicebus-servicebus_namespace"
+#   namespace_name      = "servicebus-namespace-ugox3x"
+#   name                = "servicebus-namespace-authorization-rule"
+# }
 
 resource "azurerm_resource_group" "resource_group" {
   name     = var.RESOURCE_GROUP
@@ -77,8 +72,7 @@ resource "azurerm_linux_function_app" "linux_function_app" {
 
   app_settings = {
     APPINSIGHTS_INSTRUMENTATIONKEY = azurerm_application_insights.application_insights.instrumentation_key
-    AzureWebJobsMyStorage          = data.azurerm_storage_account.my_storage.primary_connection_string
-    AzureWebJobsMyServiceBus       = data.azurerm_eventhub_namespace_authorization_rule.my_servicebus.primary_connection_string
+    # AzureWebJobsServiceBus       = data.azurerm_eventhub_namespace_authorization_rule.my_servicebus.primary_connection_string
     AzureWebJobsSecretStorageType  = "files"
     FUNCTIONS_WORKER_RUNTIME       = "node"
     WEBSITE_RUN_FROM_PACKAGE       = "1"

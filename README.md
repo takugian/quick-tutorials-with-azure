@@ -44,12 +44,12 @@ A lot of Azure tutorials for you!!! ;)
 - [linux_function_app_authentication] - Linux Function App with Authentication `backlog`
 - [linux_function_app_cli] - Linux Function App deployed using Azure CLI
 - [linux_function_app_custom_domain] - `backlog`
-- [linux_function_app_deployments_slots] - `backlog`
+- [linux_function_app_deployments_slots] - `backlog` @P1
 - [linux_function_app_docker_java_app] - `backlog`
-- [linux_function_app_docker_nodejs_app] - `backlog`
-- [linux_function_app_logs] - `backlog`
-- [linux_function_app_private] - `backlog`
-- [linux_function_app_scaling] - `backlog`
+- [linux_function_app_docker_nodejs_app] - `backlog` @P1
+- [linux_function_app_logs] - `backlog` @P1
+- [linux_function_app_private] - `backlog` @P1
+- [linux_function_app_scaling] - `backlog` @P1
 - [linux_function_app_source_control] - Linux Function App deployed using Source Control `blocked`
 
 ### [function_app_function_nodejs]
@@ -63,8 +63,8 @@ A lot of Azure tutorials for you!!! ;)
 - [service_bus_queue_trigger] - Service Bus Queue (trigger and direction out)
 - [service_bus_topic_trigger] - Service Bus Topic (trigger and direction out)
 - [sql_trigger] - xpto `backlog`
-- [table_storage_integration] - xpto `backlog` @P1
-- [timer_trigger] - xpto `backlog` @P1
+- [table_storage_in_out] - Tavble Storage (directions in and out) <!-- TODO take filter -->
+- [timer_trigger] - Timer (trigger)
 
 <!-- TODO configs avançadas host.json -->
 
@@ -164,6 +164,8 @@ A lot of Azure tutorials for you!!! ;)
 - [storage_account_queue] - Storage account with a queue
 - [storage_account_table] - Storage account with a table
 - [storage_share] - Storage account with file share `backlog`
+
+<!-- TODO network rules -->
 
 ## [virtual_machine]
 

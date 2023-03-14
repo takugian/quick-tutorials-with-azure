@@ -47,7 +47,7 @@ A lot of Azure tutorials for you!!! ;)
 - [linux_function_app_deployments_slots] - `backlog` @P1
 - [linux_function_app_docker_java_app] - `backlog`
 - [linux_function_app_docker_nodejs_app] - `backlog` @P1
-- [linux_function_app_logs] - `backlog` @P1
+- [linux_function_app_logs] - Linux Function App with Logs enabled
 - [linux_function_app_private] - `backlog` @P1
 - [linux_function_app_scaling] - `backlog` @P1
 - [linux_function_app_source_control] - Linux Function App deployed using Source Control `blocked`
@@ -139,7 +139,7 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [service_plan]
 
-- [service_plan] - Service plan `backlog`
+- [service_plan] - Service plan
 
 ## [service_bus]
 

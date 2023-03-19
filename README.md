@@ -7,11 +7,11 @@ A lot of Azure tutorials for you!!! ;)
 * [rest_nodejs_api](https://github.com/takugian/rest_nodejs_api) - NodeJS REST API
 * [nodejs_azure_function_app](https://github.com/takugian/nodejs_azure_function_app) - NodeJS Function
 
-## [active_directory]
+## [active_directory](https://github.com/takugian/quick-tutorials-with-azure/tree/main/active_directory)
 
 `backlog`
 
-## [api_management]
+## [api_management](https://github.com/takugian/quick-tutorials-with-azure/tree/main/api_management)
 
 - [api_management] - ??? `backlog`
 
@@ -55,7 +55,7 @@ azurerm_api_management_subscription
 
 azurerm_api_management_user
 
-## [app_service]
+## [app_service](https://github.com/takugian/quick-tutorials-with-azure/tree/main/app_service)
 
 - [linux_web_app_authentication] - Linux Web App with Authentication `backlog`
 - [linux_web_app_cosmosdb] - App Service integrated to CosmosDB `backlog`
@@ -71,15 +71,15 @@ azurerm_api_management_user
 - [linux_web_app_servicebus_topic_integration] - Linux Web App integrated to Service Bus Topic `backlog`
 - [linux_web_app_source_control] - Linux Web App deployed using Source Control
 
-## [application_gateway]
+## [application_gateway](https://github.com/takugian/quick-tutorials-with-azure/tree/main/application_gateway)
 
 `backlog`
 
-## [application_insights]
+## [application_insights](https://github.com/takugian/quick-tutorials-with-azure/tree/main/application_insights)
 
 - [application_insights] - Application Insights for NodeJS with Log Analytics Workspace
 
-## [azure_functions]
+## [azure_functions](https://github.com/takugian/quick-tutorials-with-azure/tree/main/azure_functions)
 
 - [linux_function_app_authentication] - Linux Function App with Authentication `backlog`
 - [linux_function_app_cli] - Linux Function App deployed using Azure CLI
@@ -108,23 +108,23 @@ azurerm_api_management_user
 
 <!-- TODO configs avançadas host.json -->
 
-## [bation_host]
+## [bation_host](https://github.com/takugian/quick-tutorials-with-azure/tree/main/bation_host)
 
 - [bastion_host] - Bastion host
 
-## [container_instance]
+## [container_instance](https://github.com/takugian/quick-tutorials-with-azure/tree/main/container_instance)
 
 `backlog`
 
-## [cache_for_redis]
+## [cache_for_redis](https://github.com/takugian/quick-tutorials-with-azure/tree/main/cache_for_redis)
 
 `backlog`
 
-## [container_registry]
+## [container_registry](https://github.com/takugian/quick-tutorials-with-azure/tree/main/container_registry)
 
 - [container_registry] - Container registry with encryption and georeplication
 
-## [cosmosdb]
+## [cosmosdb](https://github.com/takugian/quick-tutorials-with-azure/tree/main/cosmosdb)
 
 - [cosmosdb_cassandra] - Cosmos DB for Cassandra `backlog`
 - [cosmosdb_gremlin] - Cosmos DB for Gremlin `backlog`
@@ -132,11 +132,11 @@ azurerm_api_management_user
 - [cosmosdb_sql] - Cosmos DB for SQL `backlog`
 - [cosmosdb_table] - Cosmos DB for Table `backlog`
 
-## [database_for_mysql]
+## [database_for_mysql](https://github.com/takugian/quick-tutorials-with-azure/tree/main/database_for_mysql)
 
 `backlog`
 
-## [event_grid]
+## [event_grid](https://github.com/takugian/quick-tutorials-with-azure/tree/main/event_grid)
 
 - [custom_topic_http_request_to_azure_function] - EventGrid Custom Topic that integrates HTTP Request and Azure Function
 - [custom_topic_http_request_to_storage_queue] - EventGrid Custom Topic that integrates HTTP Request and Storage Queue
@@ -144,48 +144,48 @@ azurerm_api_management_user
 - [domain_topic_storage_queue] - EventGrid Domain Topic that integrates HTTP Request and Storage Queue
 - [system_topic_storage_queue] - EventGrid System Topic integrated to a Storage Queue
 
-## [front_door]
+## [front_door](https://github.com/takugian/quick-tutorials-with-azure/tree/main/front_door)
 
 `backlog`
 
-## [key_vault]
+## [key_vault](https://github.com/takugian/quick-tutorials-with-azure/tree/main/key_vault)
 
 - [key_vault] - Key vault
 - [key_vault_certificate] - Key vault certificate `backlog`
 - [key_vault_key] - Key vault key
 
-## [load_balancer]
+## [load_balancer](https://github.com/takugian/quick-tutorials-with-azure/tree/main/load_balancer)
 
 `backlog`
 
-## [logic_app]
+## [logic_app](https://github.com/takugian/quick-tutorials-with-azure/tree/main/logic_app)
 
 `backlog`
 
-## [monitor]
+## [monitor](https://github.com/takugian/quick-tutorials-with-azure/tree/main/monitor)
 
 - [monitor_activity_log_alert] - Metric Activity Log Alert
 - [monitor_autoscale_setting] - Autoscale setting of a App Service Service Plan
 - [monitor_diagnostic_setting] - Diagnostic setting from Linux Web App to a Storage Account
 - [monitor_metric_alert] - Metric Alert of a Linux Web App
 
-## [notification_hub]
+## [notification_hub](https://github.com/takugian/quick-tutorials-with-azure/tree/main/notification_hub)
 
 `backlog`
 
-## [private_endpoint]
+## [private_endpoint](https://github.com/takugian/quick-tutorials-with-azure/tree/main/private_endpoint)
 
 `backlog`
 
-## [resource_group]
+## [resource_group](https://github.com/takugian/quick-tutorials-with-azure/tree/main/resource_group)
 
 - [resource_group] - Resource group
 
-## [service_plan]
+## [service_plan](https://github.com/takugian/quick-tutorials-with-azure/tree/main/service_plan)
 
 - [service_plan] - Service plan
 
-## [service_bus]
+## [service_bus](https://github.com/takugian/quick-tutorials-with-azure/tree/main/service_bus)
 
 - [servicebus_namespace] - Service bus namespace
 - [servicebus_queue] - Service bus queue with Forward and DLQ configuration
@@ -193,15 +193,15 @@ azurerm_api_management_user
 
 <!-- TODO filters -->
 
-## [sql_database]
+## [sql_database](https://github.com/takugian/quick-tutorials-with-azure/tree/main/sql_database)
 
 `backlog`
 
-## [static_web_app]
+## [static_web_app](https://github.com/takugian/quick-tutorials-with-azure/tree/main/static_web_app)
 
 `backlog`
 
-## [storage_account]
+## [storage_account](https://github.com/takugian/quick-tutorials-with-azure/tree/main/storage_account)
 
 - [storage_account] - Storage account
 - [storage_account_blob] - Storage account with a blob
@@ -211,11 +211,11 @@ azurerm_api_management_user
 
 <!-- TODO network rules -->
 
-## [virtual_machine]
+## [virtual_machine](https://github.com/takugian/quick-tutorials-with-azure/tree/main/virtual_machine)
 
 - [virtual_machine] - Virtual Machine
 
-## [virtual_network]
+## [virtual_network](https://github.com/takugian/quick-tutorials-with-azure/tree/main/virtual_network)
 
 - [vnet_subnet_private] - Virtual Network with two private subnets and security groups
 

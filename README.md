@@ -13,7 +13,47 @@ A lot of Azure tutorials for you!!! ;)
 
 ## [api_management]
 
-`backlog`
+- [api_management] - ??? `backlog`
+
+azurerm_api_management_api_diagnostic
+azurerm_api_management_diagnostic
+
+azurerm_api_management_api_policy
+azurerm_api_management_api_operation_policy
+
+azurerm_api_management_api_version_set
+
+azurerm_api_management_authorization_server
+azurerm_api_management_certificate
+azurerm_api_management_custom_domain
+
+azurerm_api_management_email_template
+
+azurerm_api_management_gateway
+azurerm_api_management_gateway_api
+azurerm_api_management_gateway_certificate_authority
+azurerm_api_management_gateway_host_name_configuration
+
+azurerm_api_management_group
+azurerm_api_management_group_user
+
+azurerm_api_management_logger
+
+azurerm_api_management_notification_recipient_email
+azurerm_api_management_notification_recipient_user
+
+azurerm_api_management_product
+azurerm_api_management_product_api
+azurerm_api_management_product_group
+azurerm_api_management_product_policy
+azurerm_api_management_product_tag
+
+azurerm_api_management_redis_cache
+
+azurerm_api_management_global_schema
+azurerm_api_management_subscription
+
+azurerm_api_management_user
 
 ## [app_service]
 
@@ -84,9 +124,13 @@ A lot of Azure tutorials for you!!! ;)
 
 - [container_registry] - Container registry with encryption and georeplication
 
-## [cosmos_db]
+## [cosmosdb]
 
-`backlog`
+- [cosmosdb_cassandra] - Cosmos DB for Cassandra `backlog`
+- [cosmosdb_gremlin] - Cosmos DB for Gremlin `backlog`
+- [cosmosdb_mongo] - Cosmos DB for Mongo
+- [cosmosdb_sql] - Cosmos DB for SQL `backlog`
+- [cosmosdb_table] - Cosmos DB for Table `backlog`
 
 ## [database_for_mysql]
 
